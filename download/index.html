@@ -62,11 +62,11 @@
   </div>
 
 <script>
-  var APP = "https://apps.apple.com/us/app/lumi-studio/id6758225277";
+  var APP = "https://apps.apple.com/app/apple-store/id6758225277"; // ASC 官方活动链接格式
   var PT  = "128435016";
   var p = new URLSearchParams(location.search);
   var ct = (p.get("c") || p.get("ct") || "bio").replace(/[^a-zA-Z0-9_-]/g,"").slice(0,40) || "bio";
-  var STORE = APP + "?pt=" + PT + "&ct=" + encodeURIComponent(ct);
+  var STORE = APP + "?pt=" + PT + "&ct=" + encodeURIComponent(ct) + "&mt=8"; // ASC 官方活动链接格式(Safari 打开, mt=8 无碍)
   document.getElementById("store").setAttribute("href", STORE);
   var ua = navigator.userAgent || "";
   var inApp = /BytedanceWebview|musical_ly|Trill|TikTok|Instagram|FBAN|FBAV|FB_IAB|Line\/|Snapchat|Twitter|MicroMessenger/i.test(ua);
